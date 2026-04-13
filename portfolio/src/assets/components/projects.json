@@ -1,0 +1,46 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "description": "A brief description of Project One.",
+    "image": "path/to/image1.jpg",
+    "link": "https://example.com/project-one",
+    "repo": "https://github.com/user/project-one",
+    "year": "2023",
+    "stack": ["React", "Node.js", "MongoDB"],
+    "projectType": "Personal Project"
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "description": "A brief description of Project Two.",
+    "image": "path/to/image2.jpg",
+    "link": "https://example.com/project-two",
+    "repo": "https://github.com/user/project-two",
+    "year": "2024",
+    "stack": ["JavaScript", "Python", "PostgreSQL"],
+    "projectType": "Open Source Tool"
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "description": "A brief description of Project Three.",
+    "image": "path/to/image3.jpg",
+    "link": "https://example.com/project-three",
+    "repo": "https://github.com/user/project-three",
+    "year": "2024",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "projectType": "Personal Project"
+  },
+  {
+    "id": 4,
+    "title": "Project Four",
+    "description": "A brief description of Project Four.",
+    "image": "path/to/image4.jpg",
+    "link": "https://example.com/project-four",
+    "repo": "https://github.com/user/project-four",
+    "year": "2023",
+    "stack": ["React", "Express", "MySQL"],
+    "projectType": "Experiment"
+  }
+]
