@@ -17,7 +17,7 @@ const Hero = () => {
           <span className="text-gradient">interfaces</span>
           <br /> that feel alive
         </h1>
-        <p className="text-lg md:pr-30 mb-7 max-w-170">
+        <p className="text-lg mb-7 max-w-full md:max-w-170 md:pr-30">
           Self-taught frontend developer focused on creating fast, accessible,
           and visually compelling web experiences.
         </p>

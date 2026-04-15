@@ -7,7 +7,7 @@ const Contact = () => {
       >
         <main className="w-full">
           <p className="title">CONTACT</p>
-          <h1 className="text-4xl md:text-5xl w-1/2 lg:w-full lg:text-6xl font-display font-bold text-foreground mb-8">
+          <h1 className="text-4xl md:text-5xl w-full lg:text-6xl font-display font-bold text-foreground mb-8">
             Let's work together<span className="text-primary">.</span>
           </h1>
           <p className="mb-6 text-lg">
