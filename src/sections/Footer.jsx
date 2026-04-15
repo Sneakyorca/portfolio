@@ -7,7 +7,7 @@ const Footer = () => {
         <p className="ml-auto">Designed & developed by me</p>
         <a
           href="#hero"
-          className=" p-2 px-3 bg-secondary inline-block rounded-full  hover:bg-primary hover:text-background transition-all duration-300"
+          className="p-2 px-3 bg-secondary inline-block rounded-full hover:bg-primary hover:text-background active:bg-primary active:text-background transition-all duration-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

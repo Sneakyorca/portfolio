@@ -22,7 +22,7 @@ const Hero = () => {
           and visually compelling web experiences.
         </p>
         <div className="flex gap-4 font-display mb-12 font-semibold text-sm">
-          <button className="px-6 py-3 rounded-full bg-primary text-primary-foreground dark:text-background  hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
+          <button className="px-6 py-3 rounded-full bg-primary text-primary-foreground dark:text-background hover:shadow-lg hover:shadow-primary/25 active:shadow-lg active:shadow-primary/25 transition-all duration-300">
             <a href="#work" className="flex items-center gap-2">
               View my work{" "}
               <svg
@@ -39,7 +39,7 @@ const Hero = () => {
               </svg>
             </a>
           </button>
-          <button className="px-6 py-3 rounded-full  text-foreground border hover:bg-muted/50 transition-all duration-300">
+          <button className="px-6 py-3 rounded-full text-foreground border hover:bg-muted/50 active:bg-muted/50 transition-all duration-300">
             <a href="#contact">Get in touch</a>
           </button>
         </div>
@@ -56,7 +56,7 @@ const Hero = () => {
         </div>
         <a
           href="#about"
-          className="text-sm w-full text-nowrap mt-16 flex items-center hover:text-foreground dark:hover:text-foreground"
+          className="text-sm w-full text-nowrap mt-16 flex items-center hover:text-foreground active:text-foreground dark:hover:text-foreground dark:active:text-foreground"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

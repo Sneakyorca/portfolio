@@ -107,19 +107,19 @@ html {
   }
 }
 .section {
-  @apply px-6 md:px-12 lg:px-20 md:pt-16 md:mb-58 pt-16 mb-24;
+  @apply px-6 md:px-12 lg:px-20 pt-28 md:pt-32 md:mb-40 mb-24;
 }
 #hero {
-  @apply pt-26;
+  @apply pt-28 md:pt-42;
 }
 #work {
   @apply md:mb-32 mb-20;
 }
 #skills {
-  @apply md:pt-32 md:pb-32 pb-24 mb-16;
+  @apply pt-16 md:pt-32 md:pb-32 pb-24 mb-4;
 }
 #contact {
-  @apply md:pt-16 pt-8;
+  @apply pt-16 md:pt-32;
 }
 .badge {
   @apply inline-block text-xs py-1 px-3 bg-muted rounded-lg;
@@ -131,7 +131,7 @@ html {
   @apply dark:text-gray-600/70 text-gray-400/70 text-[10px] tracking-[0.2em] uppercase;
 }
 #about .item {
-  @apply flex  gap-12 items-start mb-4 hover:bg-muted/50 rounded-lg p-5 px-2 pr-5 -translate-x-3;
+  @apply flex gap-12 items-start mb-4 hover:bg-muted/50 active:bg-muted/50 rounded-lg p-5 px-2 pr-5 -translate-x-3;
 }
 
 #about .item > p {
@@ -150,6 +150,9 @@ html {
   border: 1px solid hsl(var(--border));
 }
 .border:hover {
+  border-color: #e8553050;
+}
+.border:active {
   border-color: #e8553050;
 }
 .ripple {

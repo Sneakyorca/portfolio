@@ -69,9 +69,9 @@ const Socials = ({ info }) => {
     <a
       href={info.link}
       target="_blank"
-      className="bg-card/30 hover:bg-card  border p-4 flex justify-between items-center rounded-xl group"
+      className="bg-card/30 hover:bg-card active:bg-card border p-4 flex justify-between items-center rounded-xl group"
     >
-      <span className="inline-block p-3 rounded-full bg-secondary/50 mr-4 text-gray-500 dark:text-gray-400 group-hover:bg-primary/10 group-hover:text-primary transition-all duration-300">
+      <span className="inline-block p-3 rounded-full bg-secondary/50 mr-4 text-gray-500 dark:text-gray-400 group-hover:bg-primary/10 group-hover:text-primary group-active:bg-primary/10 group-active:text-primary transition-all duration-300">
         {info.id == 1 ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +141,7 @@ const Socials = ({ info }) => {
         fill="currentColor"
         stroke="currentColor"
         strokeWidth="0.5"
-        className="size-3.5 opacity-50 inline-block rotate-225 justify-self-end group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all duration-300 group-hover:text-primary group-hover:opacity-100"
+        className="size-3.5 opacity-50 inline-block rotate-225 justify-self-end group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-active:-translate-y-0.5 group-active:translate-x-0.5 transition-all duration-300 group-hover:text-primary group-hover:opacity-100 group-active:text-primary group-active:opacity-100"
       >
         <path
           fillRule="evenodd"

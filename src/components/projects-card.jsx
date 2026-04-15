@@ -5,7 +5,7 @@ const ProjectCard = () => {
       {projects.map((project) => (
         <div
           className={
-            "project-card cursor-pointer hover:shadow-lg hover:shadow-primary/5 " +
+            "project-card cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 " +
             project.id +
             ` bg-card dark:bg-card rounded-xl border group`
           }
@@ -35,7 +35,7 @@ const ProjectCard = () => {
                 {" "}
                 <a
                   href={project.repo}
-                  className="inline-block p-2.5 rounded-full bg-secondary -translate-x-3 opacity-0 group-hover:translate-0 group-hover:opacity-100 transition-all duration-300"
+                  className="inline-block p-2.5 rounded-full bg-secondary -translate-x-3 opacity-0 group-hover:translate-0 group-hover:opacity-100 group-active:translate-0 group-active:opacity-100 transition-all duration-300"
                   target="_blank"
                 >
                   <svg
@@ -54,7 +54,7 @@ const ProjectCard = () => {
                 </a>
                 <a
                   href={project.link}
-                  className="inline-block p-3 rounded-full bg-secondary group-hover:bg-primary transition-all duration-300"
+                  className="inline-block p-3 rounded-full bg-secondary group-hover:bg-primary group-active:bg-primary transition-all duration-300"
                   target="_blank"
                 >
                   <svg
@@ -63,7 +63,7 @@ const ProjectCard = () => {
                     fill="currentColor"
                     stroke="currentColor"
                     strokeWidth="0.8"
-                    className="size-3.5 rotate-225 text-foreground group-hover:text-background"
+                    className="size-3.5 rotate-225 text-foreground group-hover:text-background group-active:text-background"
                   >
                     <path
                       fillRule="evenodd"

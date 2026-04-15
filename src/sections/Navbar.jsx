@@ -51,7 +51,7 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`#${item}`}
-                  className="relative text-sm font-body text-muted-foreground hover:text-foreground transition-colors duration-200 capitalize after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                  className="relative text-sm font-body text-muted-foreground hover:text-foreground active:text-foreground transition-colors duration-200 capitalize after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full active:after:w-full"
                 >
                   {item}
                 </a>
@@ -59,7 +59,7 @@ const Navbar = () => {
             </div>
 
             <button
-              className="relative w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-foreground hover:bg-secondary/80 transition-all duration-300 cursor-pointer"
+              className="relative w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-foreground hover:bg-secondary/80 active:bg-secondary/80 transition-all duration-300 cursor-pointer"
               aria-label="Toggle theme"
             >
               <svg
@@ -151,7 +151,7 @@ const Navbar = () => {
             key={item}
             href={`#${item}`}
             onClick={() => setMobileOpen(false)}
-            className="text-3xl font-display font-bold text-foreground hover:text-primary transition-colors capitalize"
+            className="text-3xl font-display font-bold text-foreground hover:text-primary active:text-primary transition-colors capitalize"
             style={{
               transitionDelay: mobileOpen ? `${i * 75}ms` : "0ms",
               opacity: mobileOpen ? 1 : 0,

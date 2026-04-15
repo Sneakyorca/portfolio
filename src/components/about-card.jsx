@@ -1,7 +1,7 @@
 const AboutCard = ({ id, text1, text2 }) => {
   return (
-    <div className="about-card border bg-card/30 hover:bg-card transition-colors duration-300 p-6 rounded-xl group">
-      <span className="inline-block bg-primary/10 p-3 rounded-xl mb-2 group-hover:bg-primary/30 transition-all duration-300">
+    <div className="about-card border bg-card/30 hover:bg-card active:bg-card transition-colors duration-300 p-6 rounded-xl group">
+      <span className="inline-block bg-primary/10 p-3 rounded-xl mb-2 group-hover:bg-primary/30 group-active:bg-primary/30 transition-all duration-300">
         {" "}
         {id == 1 ? (
           <svg
