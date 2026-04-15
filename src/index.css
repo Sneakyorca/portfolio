@@ -127,6 +127,15 @@ html {
   .delay-5 {
     transition-delay: 0.4s;
   }
+
+  .github-link {
+    transition: all 0.3s ease;
+  }
+
+  .github-link:hover {
+    transform: translateX(0.25rem) translateY(-0.25rem);
+    background-color: hsl(var(--primary) / 0.2);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
