@@ -36,7 +36,7 @@ const ProjectCard = () => {
                 {" "}
                 <a
                   href={project.repo}
-                  className="inline-block p-2.5 rounded-full bg-secondary -translate-x-3 opacity-0 group-hover:translate-0 group-hover:opacity-100 group-active:translate-0 group-active:opacity-100 transition-all duration-300"
+                  className="github-link inline-block p-2.5 rounded-full bg-secondary"
                   target="_blank"
                 >
                   <svg
