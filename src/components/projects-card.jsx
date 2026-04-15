@@ -1,4 +1,4 @@
-import projects from "../components/projects.json";
+import projects from "./projects.json";
 const ProjectCard = () => {
   return (
     <>

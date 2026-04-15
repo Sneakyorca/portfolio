@@ -1,10 +1,10 @@
-import Navbar from "./assets/sections/Navbar";
-import Hero from "./assets/sections/Hero";
-import About from "./assets/sections/About";
-import Work from "./assets/sections/Work";
-import Skills from "./assets/sections/Skills";
-import Contact from "./assets/sections/Contact";
-import Footer from "./assets/sections/Footer";
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Work from "./sections/Work";
+import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 function App() {
   return (
     <>
