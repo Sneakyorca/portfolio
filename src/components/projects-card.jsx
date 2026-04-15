@@ -20,7 +20,7 @@ const ProjectCard = () => {
                 {project.projectType}
               </span>
             </div>
-            <h3 className="text-2xl font-display text-foreground mb-4 font-bold">
+            <h3 className="text-2xl font-display text-foreground mb-4 font-bold group-hover:text-primary group-active:text-primary transition-all duration-300">
               {project.title}
             </h3>
             <p className="mb-6 font-sm">{project.description}</p>
