@@ -5,16 +5,19 @@ const Contact = () => {
         id="contact"
         className="section flex justify-between flex-1 flex-col lg:flex-row gap-24"
       >
-        <main className="w-full">
-          <p className="title">CONTACT</p>
-          <h1 className="text-4xl md:text-5xl w-full lg:text-6xl font-display font-bold text-foreground mb-8">
+        <main className="w-full reveal">
+          <p className="title fade-in">CONTACT</p>
+          <h1
+            className="fade-in-up text-4xl md:text-5xl w-full lg:text-6xl font-display font-bold text-foreground mb-8"
+            data-reveal-delay="0.06s"
+          >
             Let's work together<span className="text-primary">.</span>
           </h1>
-          <p className="mb-6 text-lg">
+          <p className="fade-in mb-6 text-lg" data-reveal-delay="0.12s">
             I'm currently open to freelance projects and full-time roles. If you
             have an idea, a project, or just want to say hi? Drop me a line.
           </p>
-          <p>
+          <p className="fade-in" data-reveal-delay="0.18s">
             Based in{" "}
             <span className="font-semibold text-foreground">
               Lagos, Nigeria.{" "}
@@ -22,7 +25,10 @@ const Contact = () => {
             Open to remote worldwide.
           </p>
         </main>
-        <aside className="w-full flex flex-col gap-3">
+        <aside
+          className="w-full flex flex-col gap-3 slide-in-right"
+          data-reveal-delay="0.22s"
+        >
           <Socials
             info={{
               link: "github.com/Sneakyorca",
@@ -65,11 +71,14 @@ const Contact = () => {
   );
 };
 const Socials = ({ info }) => {
+  const delay = `${0.06 * info.id}s`;
+
   return (
     <a
       href={info.link}
       target="_blank"
-      className="bg-card/30 hover:bg-card active:bg-card border p-4 flex justify-between items-center rounded-xl group"
+      className="reveal bg-card/30 hover:bg-card active:bg-card border p-4 flex justify-between items-center rounded-xl group"
+      data-reveal-delay={delay}
     >
       <span className="inline-block p-3 rounded-full bg-secondary/50 mr-4 text-gray-500 dark:text-gray-400 group-hover:bg-primary/10 group-hover:text-primary group-active:bg-primary/10 group-active:text-primary transition-all duration-300">
         {info.id == 1 ? (

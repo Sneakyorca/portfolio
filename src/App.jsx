@@ -5,15 +5,21 @@ import Work from "./sections/Work";
 import Skills from "./sections/Skills";
 import Contact from "./sections/Contact";
 import Footer from "./sections/Footer";
+import BackgroundEffects from "./sections/BackgroundEffects";
+import { useReveal } from "./hooks/useReveal";
 function App() {
+  const revealRef = useReveal();
   return (
     <>
+      <BackgroundEffects />
       <Navbar />
-      <Hero />
-      <About />
-      <Work />
-      <Skills />
-      <Contact />
+      <main ref={revealRef}>
+        <Hero />
+        <About />
+        <Work />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </>
   );

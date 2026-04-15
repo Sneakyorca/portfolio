@@ -4,14 +4,20 @@ import SkillCard from "../components/skill-card";
 const Skills = () => {
   return (
     <section id="skills" className="section bg-secondary/30">
-      <p className="title">EXPERTISE</p>
-      <h2 className="text-4xl font-display text-foreground font-semibold mb-3">
+      <p className="title fade-in">EXPERTISE</p>
+      <h2
+        className="fade-in-up text-4xl font-display text-foreground font-semibold mb-3"
+        data-reveal-delay="0.06s"
+      >
         My toolkit
       </h2>
-      <p className="mb-16">
+      <p className="fade-in mb-16" data-reveal-delay="0.12s">
         Technologies and tools I use daily to bring ideas to life.
       </p>
-      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 mb-12">
+      <div
+        className="reveal grid gap-8 grid-cols-1 md:grid-cols-2 mb-12"
+        data-reveal-delay="0.18s"
+      >
         {" "}
         <SkillCard
           group="Languages & Core"
@@ -30,8 +36,13 @@ const Skills = () => {
           ]}
         />
       </div>
-      <p className="muted-text mb-4 !text-xs">ALSO FAMILIAR WITH</p>
-      <div className="flex gap-2 flex-wrap text-xs">
+      <p className="muted-text fade-in mb-4 !text-xs" data-reveal-delay="0.24s">
+        ALSO FAMILIAR WITH
+      </p>
+      <div
+        className="reveal flex gap-2 flex-wrap text-xs"
+        data-reveal-delay="0.3s"
+      >
         <OutlinedButton text="Git / GitHub" />
         <OutlinedButton text="Responsive Design" />
         <OutlinedButton text="CSS Animations" />

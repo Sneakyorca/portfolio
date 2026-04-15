@@ -2,10 +2,11 @@ import projects from "./projects.json";
 const ProjectCard = () => {
   return (
     <>
-      {projects.map((project) => (
+      {projects.map((project, index) => (
         <div
+          data-reveal-delay={`${0.08 * index}s`}
           className={
-            "project-card cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 " +
+            "project-card reveal cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 " +
             project.id +
             ` bg-card dark:bg-card rounded-xl border group`
           }
