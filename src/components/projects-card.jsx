@@ -8,11 +8,26 @@ const ProjectCard = () => {
           className={
             "project-card reveal cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 " +
             project.id +
-            ` bg-card dark:bg-card rounded-xl border group`
+            ` bg-card dark:bg-card rounded-xl border group overflow-hidden`
           }
           key={project.id}
         >
-          <img src={project.image} alt={project.title} />
+          {" "}
+          <div
+            className={`h-1.5 w-full bg-gradient-to-r ${project.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500`}
+          />
+          <div className="overflow-hidden relative">
+            {" "}
+            <img
+              src={project.image}
+              className="w-full h-20"
+              alt={project.title}
+              width={800}
+              height={512}
+              className="w-full h-48 md:h-52 object-cover object-top transition-transform duration-700 group-hover:scale-105"
+            />{" "}
+            <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
+          </div>
           <div className="p-10">
             <div className="mb-4 flex gap-4 items-center">
               <span className="badge">{project.year}</span>

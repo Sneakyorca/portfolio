@@ -13,7 +13,7 @@ function App() {
     <>
       <BackgroundEffects />
       <Navbar />
-      <main ref={revealRef}>
+      <main ref={revealRef} className="overflow-x-hidden">
         <Hero />
         <About />
         <Work />
