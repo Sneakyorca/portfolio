@@ -31,7 +31,7 @@ const Contact = () => {
         >
           <Socials
             info={{
-              link: "github.com/Sneakyorca",
+              link: "https://github.com/Sneakyorca",
               icon: "",
               platform: "GitHub",
               username: "@sneakyorca",
@@ -40,7 +40,7 @@ const Contact = () => {
           />
           <Socials
             info={{
-              link: "linkedin.com/in/abdulmaleek-odetunde-95b00a366",
+              link: "https://linkedin.com/in/abdulmaleek-odetunde-95b00a366",
               icon: "",
               platform: "LinkedIn",
               username: "abdulmaleekodetunde",
@@ -49,7 +49,7 @@ const Contact = () => {
           />
           <Socials
             info={{
-              link: "x.com/sneakyorca",
+              link: "https://x.com/sneakyorca",
               icon: "",
               platform: "X",
               username: "@sneakyorca",
