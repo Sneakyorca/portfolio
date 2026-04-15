@@ -116,10 +116,10 @@ html {
   @apply md:mb-32 mb-20;
 }
 #skills {
-  @apply pt-16 md:pt-32 md:pb-32 pb-24 mb-4;
+  @apply pt-28 md:pt-32 md:pb-32 pb-24 mb-4;
 }
 #contact {
-  @apply pt-16 md:pt-32;
+  @apply pt-28 md:pt-32;
 }
 .badge {
   @apply inline-block text-xs py-1 px-3 bg-muted rounded-lg;
