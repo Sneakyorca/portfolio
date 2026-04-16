@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
-
+import { useContext, useEffect, useState } from "react";
+import { ThemeContext } from "../hooks/ThemeContext";
 const navItems = ["about", "work", "skills", "contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,6 +60,7 @@ const Navbar = () => {
             </div>
 
             <button
+              onClick={toggleTheme}
               className="relative w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-foreground hover:bg-secondary/80 active:bg-secondary/80 transition-all duration-300 cursor-pointer"
               aria-label="Toggle theme"
             >
