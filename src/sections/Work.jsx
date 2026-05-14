@@ -14,7 +14,7 @@ const Work = () => {
         Personal project, open-source tools, and experiments that keep me sharp.
       </p>
       <div
-        className="projects reveal mt-12 grid grid-cols-1 gap-6 justify-center items-center md:grid-cols-2"
+        className="projects reveal mt-12 grid grid-cols-1 gap-6 justify-center items-stretch md:grid-cols-2"
         data-reveal-delay="0.18s"
       >
         <ProjectCard />

@@ -9,7 +9,7 @@ const ProjectCard = () => {
           rel="noopener noreferrer"
           data-reveal-delay={`${0.08 * index}s`}
           className={
-            "project-card reveal cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 " +
+            "project-card reveal cursor-pointer hover:shadow-lg hover:shadow-primary/5 active:shadow-lg active:shadow-primary/5 flex flex-col h-full " +
             project.id +
             ` bg-card dark:bg-card rounded-xl border group overflow-hidden`
           }
@@ -23,7 +23,6 @@ const ProjectCard = () => {
             {" "}
             <img
               src={project.image}
-              className="w-full h-20"
               alt={project.title}
               width={800}
               height={512}
@@ -34,7 +33,7 @@ const ProjectCard = () => {
           <span className="absolute top-14 right-6 text-7xl font-display font-black text-foreground/[0.03] group-hover:text-foreground/[0.06] transition-colors duration-500 select-none leading-none">
             0{project.id}
           </span>{" "}
-          <div className="p-10">
+          <div className="p-10 flex flex-col justify-between flex-1">
             <div className="mb-4 flex gap-4 items-center">
               <span className="badge">{project.year}</span>
               <span className="inline-block text-xs text-gray-400 dark:text-gray-600">
