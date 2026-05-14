@@ -1,50 +1,24 @@
 [
   {
     "id": 1,
-    "title": "Project One",
-    "description": "A brief description of Project One.",
-    "image": "../../assets/img1.png",
-    "link": "path/to/image1.jpg",
-    "repo": "https://github.com/user/project-one",
-    "year": "2023",
-    "stack": ["React", "Node.js", "MongoDB"],
+    "title": "TradeWithNifemi — Trading Signals Hub",
+    "description": "Freelance landing page for a trading signals and account management service. Built with React and Tailwind, featuring interactive performance charts, responsive dark UI, and contact form components throughout.",
+    "image": "../../assets/tradewithnifemi.png",
+    "link": "https://trade-with-nifemi.vercel.app/",
+    "year": "2026",
+    "stack": ["React", "Tailwind CSS", "JavaScript", "REST API"],
     "gradient": "from-[hsl(12,80%,55%)] to-[hsl(30,90%,60%)]",
-    "projectType": "Personal Project"
+    "projectType": "Freelance Developer"
   },
   {
     "id": 2,
-    "title": "Project Two",
-    "description": "A brief description of Project Two.",
-    "image": "path/to/image2.jpg",
-    "link": "https://example.com/project-two",
-    "repo": "https://github.com/user/project-two",
-    "year": "2024",
-    "stack": ["JavaScript", "Python", "PostgreSQL"],
+    "title": "Cravue — Brand Marketing Platform",
+    "description": "Freelance frontend for a brand marketing agency. Responsive platform UI built with React and CSS, featuring custom API integration for form submissions and a clean, conversion-focused layout shipped end to end.",
+    "image": "../../assets/cravue.png",
+    "link": "https://crauve.org",
+    "year": "2026",
+    "stack": ["React", "CSS", "JavaScript", "REST API"],
     "gradient": "from-[hsl(220,60%,50%)] to-[hsl(260,60%,55%)]",
-    "projectType": "Open Source Tool"
-  },
-  {
-    "id": 3,
-    "title": "Project Three",
-    "description": "A brief description of Project Three.",
-    "image": "path/to/image3.jpg",
-    "link": "https://example.com/project-three",
-    "repo": "https://github.com/user/project-three",
-    "year": "2024",
-    "stack": ["HTML", "CSS", "JavaScript"],
-    "gradient": "from-[hsl(150,60%,40%)] to-[hsl(170,50%,45%)]",
-    "projectType": "Personal Project"
-  },
-  {
-    "id": 4,
-    "title": "Project Four",
-    "description": "A brief description of Project Four.",
-    "image": "path/to/image4.jpg",
-    "link": "https://example.com/project-four",
-    "repo": "https://github.com/user/project-four",
-    "year": "2023",
-    "stack": ["React", "Express", "MySQL"],
-    "gradient": "from-[hsl(40,80%,55%)] to-[hsl(20,70%,50%)]",
-    "projectType": "Experiment"
+    "projectType": "Freelance Developer"
   }
 ]
