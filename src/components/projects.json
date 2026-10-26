@@ -1,6 +1,17 @@
 [
   {
     "id": 1,
+    "title": "Planet 9 — Cinematography & Visual Production Studio",
+    "description": "Freelance website for a Lagos cinematography and visual production studio. Cinematic dark UI with a filterable portfolio of films and photography, clear services, and booking calls to action throughout. Built with React and Tailwind CSS.",
+    "image": "/assets/planet9.png",
+    "link": "https://planet9-cyan.vercel.app/",
+    "year": "2026",
+    "stack": ["React", "Tailwind CSS"],
+    "gradient": "from-[hsl(25,95%,53%)] to-[hsl(12,80%,40%)]",
+    "projectType": "Freelance Developer"
+  },
+  {
+    "id": 2,
     "title": "TradeWithNifemi — Trading Signals Hub",
     "description": "Freelance landing page for a trading signals and account management service. Built with React and Tailwind, featuring interactive performance charts, responsive dark UI, and contact form components throughout.",
     "image": "/assets/tradewithnifemi.png",
@@ -11,7 +22,7 @@
     "projectType": "Freelance Developer"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Cravue — Brand Marketing Platform",
     "description": "Freelance frontend for a brand marketing agency. Responsive platform UI built with React and CSS, featuring custom API integration for form submissions and a clean, conversion-focused layout shipped end to end.",
     "image": "/assets/cravue.png",
