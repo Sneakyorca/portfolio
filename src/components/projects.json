@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "ResumeIQ — AI Resume Review",
+    "description": "Personal project: an AI resume review app. Upload a PDF or DOCX, or paste text, and get an overall score, category scores and line-by-line rewrites. Email authentication, saved reports and PDF export.",
+    "image": "/assets/resumeiq.png",
+    "link": "https://resume-iq-seven-teal.vercel.app/",
+    "repo": "https://github.com/Sneakyorca/ResumeIQ",
+    "year": "2026",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Gemini API"
+    ],
+    "gradient": "from-[hsl(142,76%,36%)] to-[hsl(160,70%,40%)]",
+    "projectType": "Personal Project"
+  },
+  {
+    "id": 2,
     "title": "Planet 9 — Cinematography & Visual Production Studio",
     "description": "Freelance website for a Lagos cinematography and visual production studio. Cinematic dark UI with a filterable portfolio of films and photography, clear services, and booking calls to action throughout. Built with React and Tailwind CSS.",
     "image": "/assets/planet9.png",
@@ -11,7 +29,7 @@
     "projectType": "Freelance Developer"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "TradeWithNifemi — Trading Signals Hub",
     "description": "Freelance landing page for a trading signals and account management service. Built with React and Tailwind, featuring interactive performance charts, responsive dark UI, and contact form components throughout.",
     "image": "/assets/tradewithnifemi.png",
@@ -22,7 +40,7 @@
     "projectType": "Freelance Developer"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Cravue — Brand Marketing Platform",
     "description": "Freelance frontend for a brand marketing agency. Responsive platform UI built with React and CSS, featuring custom API integration for form submissions and a clean, conversion-focused layout shipped end to end.",
     "image": "/assets/cravue.png",
