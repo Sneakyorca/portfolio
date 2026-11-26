@@ -1,108 +1,131 @@
-import MiniCard from "../components/mini-info-card";
-import OutlinedButton from "../components/outlined-button";
+import Magnetic from "../components/magnetic";
+import RotatingWord from "../components/rotating-word";
+import HeroShowcase from "../components/hero-showcase";
+import { clientProjects, totalProjects } from "../components/work-stats";
+
+const stats = [
+  { value: "2+", label: "Years building" },
+  { value: String(totalProjects), label: "Projects shipped" },
+  { value: String(clientProjects), label: "For clients" },
+];
+
+const ARROW_RIGHT =
+  "M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z";
+const ARROW_DOWN =
+  "M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z";
 
 const Hero = () => {
   return (
-    <section id="hero" className="flex section items-center justify-between">
-      {" "}
-      <div className="absolute top-20 right-[10%] w-72 h-72 bg-primary/10 rounded-full blur-[100px] animate-fade-in" />
+    <section
+      id="hero"
+      className="relative isolate section grid lg:grid-cols-[1.05fr_1fr] items-center gap-x-12 gap-y-16"
+    >
       <div
-        className="absolute bottom-20 left-[5%] w-56 h-56 bg-primary/5 rounded-full blur-[80px] animate-fade-in"
-        style={{ animationDelay: "0.3s" }}
-      />{" "}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.15)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.15)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_40%,black_40%,transparent_100%)]" />
-      <main>
-        <div
-          className="availability fade-in-up flex items-center tracking-widest gap-2 mb-8 text-sm"
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,hsl(var(--border)/0.35)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.35)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_70%_60%_at_30%_40%,black_30%,transparent_100%)]"
+      />
+
+      <div>
+        <p
+          className="fade-in-up t-eyebrow flex items-center gap-3 mb-8 text-muted-foreground"
           data-reveal-delay="0.05s"
         >
-          <div className="relative flex items-center justify-center ">
-            <span className="p-1 bg-green-400 rounded-full "></span>
-            <span className="p-1 bg-green-400 rounded-full ripple absolute"></span>
-          </div>{" "}
-          AVAILABLE FOR WORK
-        </div>
+          <span className="relative flex size-2">
+            <span className="absolute inset-0 rounded-full bg-green-500 ripple" />
+            <span className="relative size-2 rounded-full bg-green-500" />
+          </span>
+          Available for work · Lagos
+        </p>
+
         <h1
-          className="fade-in-up whitespace-normal font-display font-bold lg:text-8xl text-foreground mb-8 tracking-tight md:text-7xl text-5xl"
+          className="fade-in-up t-display hero-title mb-8"
           data-reveal-delay="0.12s"
         >
-          I craft <br />
-          <span className="text-gradient">interfaces</span>
-          <br /> that feel alive
+          I build
+          <br />
+          the web for
+          <br />
+          <RotatingWord
+            className="text-primary"
+            words={["studios.", "salons.", "traders.", "agencies.", "AI apps."]}
+          />
         </h1>
-        <p
-          className="fade-in text-lg mb-7 max-w-full md:max-w-170 md:pr-30"
-          data-reveal-delay="0.2s"
-        >
-          Self-taught frontend developer focused on creating fast, accessible,
-          and visually compelling web experiences.
+
+        <p className="fade-in t-lead max-w-lg mb-10" data-reveal-delay="0.2s">
+          Self-taught frontend developer. Since 2024 I&apos;ve shipped{" "}
+          {totalProjects} projects in React and Next.js, {clientProjects} of
+          them for paying clients.
         </p>
+
         <div
-          className="fade-in flex gap-4 font-display mb-12 font-semibold text-sm"
+          className="fade-in flex flex-wrap items-center gap-4 font-display font-semibold mb-12"
           data-reveal-delay="0.28s"
         >
-          <button className="px-6 py-3 rounded-full bg-primary text-primary-foreground dark:text-background hover:shadow-lg hover:shadow-primary/25 active:shadow-lg active:shadow-primary/25 transition-all duration-300">
-            <a href="#work" className="flex items-center gap-2">
-              View my work{" "}
+          <Magnetic>
+            <a
+              href="#work"
+              className="group/cta flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground dark:text-background hover:bg-primary/90 hover:shadow-[0_8px_24px_-8px_hsl(var(--primary)/0.6)] transition-[background-color,box-shadow] duration-300"
+            >
+              View my work
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="size-3.5"
+                className="size-4 transition-transform duration-300 group-hover/cta:translate-x-1"
+                aria-hidden="true"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M16.72 7.72a.75.75 0 0 1 1.06 0l3.75 3.75a.75.75 0 0 1 0 1.06l-3.75 3.75a.75.75 0 1 1-1.06-1.06l2.47-2.47H3a.75.75 0 0 1 0-1.5h16.19l-2.47-2.47a.75.75 0 0 1 0-1.06Z"
-                  clipRule="evenodd"
-                />
+                <path fillRule="evenodd" d={ARROW_RIGHT} clipRule="evenodd" />
               </svg>
             </a>
-          </button>
-          <button className="px-6 py-3 rounded-full text-foreground border hover:bg-muted/50 active:bg-muted/50 transition-all duration-300">
-            <a href="#contact">Get in touch</a>
-          </button>
+          </Magnetic>
+          <Magnetic>
+            <a
+              href="#contact"
+              className="inline-block px-7 py-3.5 rounded-full text-foreground border hover:bg-muted/60 transition-colors duration-300"
+            >
+              Get in touch
+            </a>
+          </Magnetic>
         </div>
-        <div className="fade-in" data-reveal-delay="0.34s">
-          <p className="muted-text mb-2">CURRENTLY WORKING WITH</p>
-          <div className="group flex gap-2 flex-wrap text-xs">
-            <OutlinedButton text="HTML" />
-            <OutlinedButton text="CSS" />
-            <OutlinedButton text="JavaScript" />
-            <OutlinedButton text="React" />
-            <OutlinedButton text="Tailwind" />
-            <OutlinedButton text="Sass" />
-          </div>
-        </div>
-        <a
-          href="#about"
-          className="fade-in text-sm w-full text-nowrap mt-16 flex items-center hover:text-foreground active:text-foreground dark:hover:text-foreground dark:active:text-foreground"
-          data-reveal-delay="0.42s"
+
+        <dl
+          className="fade-in flex divide-x divide-border"
+          data-reveal-delay="0.34s"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            stroke="currentColor"
-            strokeWidth="0.8"
-            className="size-3.5 inline-block animate-bounce mr-2"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12 2.25a.75.75 0 0 1 .75.75v16.19l6.22-6.22a.75.75 0 1 1 1.06 1.06l-7.5 7.5a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 1 1 1.06-1.06l6.22 6.22V3a.75.75 0 0 1 .75-.75Z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Scroll to explore
-        </a>
-      </main>
-      <aside
-        className="hidden lg:block slide-in-right"
-        data-reveal-delay="0.2s"
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="flex flex-col-reverse px-4 sm:px-6 first:pl-0 last:pr-0"
+            >
+              <dt className="t-meta text-muted-foreground mt-2">{s.label}</dt>
+              <dd className="font-display font-extrabold text-foreground text-3xl md:text-4xl leading-none tracking-tight">
+                {s.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div className="slide-in-right" data-reveal-delay="0.25s">
+        <HeroShowcase />
+      </div>
+
+      <a
+        href="#work"
+        className="fade-in t-meta absolute bottom-0 left-6 md:left-12 lg:left-20 hidden lg:flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+        data-reveal-delay="0.42s"
       >
-        <MiniCard id={1} text1={`2+`} text2={`Years in deep code`} />
-        <MiniCard id={2} text1={`100%`} text2={`Self-taught and loving it`} />
-        <MiniCard id={3} text2={`Cups of coffee consumed`} />
-      </aside>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          className="size-3.5 animate-bounce"
+          aria-hidden="true"
+        >
+          <path fillRule="evenodd" d={ARROW_DOWN} clipRule="evenodd" />
+        </svg>
+        Scroll to explore
+      </a>
     </section>
   );
 };

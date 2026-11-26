@@ -30,13 +30,32 @@
 
 | Role                   | Font          | Weights            |
 | ---------------------- | ------------- | ------------------ |
-| **Display / Headings** | Space Grotesk | 300–700            |
-| **Body**               | DM Sans       | 300, 400, 500, 700 |
+| **Display / Headings** | Bricolage Grotesque | 300–800 (opsz 96) |
+| **Body**               | Hanken Grotesk      | 300–700            |
+| **Labels / meta**      | JetBrains Mono      | 400, 500           |
+
+### Type scale
+
+Defined once in `src/index.css` as Tailwind utilities; sizes are fluid (clamp) between ~375px and ~1440px.
+
+| Class        | Use                         | Size        |
+| ------------ | --------------------------- | ----------- |
+| `t-display`  | Hero and Contact headlines  | 48 → 112px  |
+| `t-h2`       | Section headings            | 36 → 64px   |
+| `t-h3`       | Project titles              | 24 → 32px   |
+| `t-h4`       | Small headings, card titles | 18 → 20px   |
+| `t-lead`     | Intro paragraphs            | 18 → 21px   |
+| (body)       | Paragraphs                  | 16px        |
+| `t-small`    | Secondary copy              | 14px        |
+| `t-eyebrow`  | Mono section labels         | 12px        |
+| `t-meta`     | Mono metadata, badges       | 11px        |
+
+Use these classes instead of raw `text-*` sizes so every section stays on the same scale.
 
 ### Usage
 
-- All `h1`–`h6` elements use `font-display` (Space Grotesk)
-- Body text uses `font-body` (DM Sans)
+- All `h1`–`h6` elements use `font-display` (Bricolage Grotesque)
+- Body text uses `font-body` (Hanken Grotesk); section labels, years and badges use `font-mono`
 - Use Tailwind classes: `font-display`, `font-body`
 
 ## Spacing & Layout
@@ -50,7 +69,7 @@
 
 | Class                         | Effect                                             |
 | ----------------------------- | -------------------------------------------------- |
-| `.text-gradient`              | Coral gradient text (clips primary to transparent) |
+| `.text-gradient`              | Solid coral accent text (name kept for reuse)      |
 | `.hover-lift`                 | Subtle lift on hover (`-translate-y-1`)            |
 | `.section-padding`            | Consistent section spacing                         |
 | `.reveal` / `.reveal.visible` | Scroll-triggered fade-in-up animation              |
