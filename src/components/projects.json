@@ -1,9 +1,29 @@
 [
   {
     "id": 1,
-    "title": "ResumeIQ — AI Resume Review",
-    "description": "Personal project: an AI resume review app. Upload a PDF or DOCX, or paste text, and get an overall score, category scores and line-by-line rewrites. Email authentication, saved reports and PDF export.",
-    "image": "/assets/resumeiq.png",
+    "title": "ResumeIQ",
+    "tagline": "AI resume review",
+    "summary": "Upload a resume and get an honest score, category breakdowns and line-by-line rewrites.",
+    "highlights": [
+      "Accepts PDF, DOCX or pasted text",
+      "Overall and per-category scores with line-by-line rewrites",
+      "Email authentication, saved reports and PDF export"
+    ],
+    "metrics": [
+      {
+        "value": "99",
+        "label": "Performance"
+      },
+      {
+        "value": "0.9s",
+        "label": "LCP"
+      },
+      {
+        "value": "0.06",
+        "label": "CLS"
+      }
+    ],
+    "image": "/assets/resumeiq.webp",
     "link": "https://resume-iq-seven-teal.vercel.app/",
     "repo": "https://github.com/Sneakyorca/ResumeIQ",
     "year": "2026",
@@ -14,40 +34,103 @@
       "Supabase",
       "Gemini API"
     ],
-    "gradient": "from-[hsl(142,76%,36%)] to-[hsl(160,70%,40%)]",
-    "projectType": "Personal Project"
+    "accent": "hsl(142 60% 40%)",
+    "projectType": "Personal project",
+    "metricsSource": "Lighthouse · mobile · Nov 2026"
   },
   {
     "id": 2,
-    "title": "Planet 9 — Cinematography & Visual Production Studio",
-    "description": "Freelance website for a Lagos cinematography and visual production studio. Cinematic dark UI with a filterable portfolio of films and photography, clear services, and booking calls to action throughout. Built with React and Tailwind CSS.",
-    "image": "/assets/planet9.png",
+    "title": "Planet 9",
+    "tagline": "Cinematography studio",
+    "summary": "Website for a Lagos cinematography and visual production studio.",
+    "highlights": [
+      "Cinematic dark UI built around the studio's films",
+      "Filterable portfolio of films and photography",
+      "Clear services with booking calls to action throughout"
+    ],
+    "metrics": [
+      {
+        "value": "96",
+        "label": "Performance"
+      },
+      {
+        "value": "2.0s",
+        "label": "LCP"
+      },
+      {
+        "value": "0",
+        "label": "CLS"
+      }
+    ],
+    "image": "/assets/planet9.webp",
     "link": "https://planet9-cyan.vercel.app/",
     "year": "2026",
-    "stack": ["React", "Tailwind CSS"],
-    "gradient": "from-[hsl(25,95%,53%)] to-[hsl(12,80%,40%)]",
-    "projectType": "Freelance Developer"
+    "stack": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "accent": "hsl(25 95% 53%)",
+    "projectType": "Freelance",
+    "metricsSource": "Lighthouse · mobile · Nov 2026"
   },
   {
     "id": 3,
-    "title": "TradeWithNifemi — Trading Signals Hub",
-    "description": "Freelance landing page for a trading signals and account management service. Built with React and Tailwind, featuring interactive performance charts, responsive dark UI, and contact form components throughout.",
-    "image": "/assets/tradewithnifemi.png",
+    "title": "TradeWithNifemi",
+    "tagline": "Trading signals hub",
+    "summary": "Landing page for a trading signals and account management service.",
+    "highlights": [
+      "Interactive performance charts",
+      "Responsive dark UI",
+      "Reusable contact form components"
+    ],
+    "metrics": [
+      {
+        "value": "98",
+        "label": "Performance"
+      },
+      {
+        "value": "1.5s",
+        "label": "LCP"
+      },
+      {
+        "value": "0",
+        "label": "CLS"
+      }
+    ],
+    "image": "/assets/tradewithnifemi.webp",
     "link": "https://trade-with-nifemi.vercel.app/",
     "year": "2026",
-    "stack": ["React", "Tailwind CSS", "JavaScript", "REST API"],
-    "gradient": "from-[hsl(12,80%,55%)] to-[hsl(30,90%,60%)]",
-    "projectType": "Freelance Developer"
+    "stack": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "REST API"
+    ],
+    "accent": "hsl(12 80% 55%)",
+    "projectType": "Freelance",
+    "metricsSource": "Lighthouse · mobile · Nov 2026"
   },
   {
     "id": 4,
-    "title": "Cravue — Brand Marketing Platform",
-    "description": "Freelance frontend for a brand marketing agency. Responsive platform UI built with React and CSS, featuring custom API integration for form submissions and a clean, conversion-focused layout shipped end to end.",
-    "image": "/assets/cravue.png",
+    "title": "Cravue",
+    "tagline": "Brand marketing platform",
+    "summary": "Frontend for a brand marketing agency's platform, shipped end to end.",
+    "highlights": [
+      "Responsive platform UI in React and CSS",
+      "Custom API integration for form submissions",
+      "Clean, conversion-focused layout"
+    ],
+    "metrics": [],
+    "image": "/assets/cravue.webp",
     "link": "https://crauve.org",
     "year": "2026",
-    "stack": ["React", "CSS", "JavaScript", "REST API"],
-    "gradient": "from-[hsl(220,60%,50%)] to-[hsl(260,60%,55%)]",
-    "projectType": "Freelance Developer"
+    "stack": [
+      "React",
+      "CSS",
+      "JavaScript",
+      "REST API"
+    ],
+    "accent": "hsl(230 60% 55%)",
+    "projectType": "Freelance"
   }
 ]

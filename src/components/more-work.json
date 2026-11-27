@@ -1,0 +1,18 @@
+[
+  {
+    "title": "AFROHAIR EMPIRE",
+    "tagline": "Braids, locs and extensions salon, UK",
+    "summary": "Salon site with online booking, a hair product shop with cart, and a training and vacancies page.",
+    "link": "https://www.afrohairempirelimited.co.uk/",
+    "stack": ["React", "Supabase"],
+    "projectType": "Freelance"
+  },
+  {
+    "title": "BIM-GOLD",
+    "tagline": "Hair and beauty salon, Huddersfield",
+    "summary": "Salon site with online booking, a hair product shop with cart, and a training page.",
+    "link": "https://bimgoldsalon.co.uk/",
+    "stack": ["Next.js", "Supabase"],
+    "projectType": "Freelance"
+  }
+]

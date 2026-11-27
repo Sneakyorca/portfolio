@@ -1,73 +1,98 @@
+import { useState } from "react";
+
+const EMAIL = "abdulmaleek.odetunde.dev@gmail.com";
+
+const socials = [
+  {
+    link: "https://github.com/Sneakyorca",
+    platform: "GitHub",
+    username: "@sneakyorca",
+    id: 1,
+  },
+  {
+    link: "https://linkedin.com/in/abdulmaleek-odetunde-95b00a366",
+    platform: "LinkedIn",
+    username: "abdulmaleekodetunde",
+    id: 2,
+  },
+  {
+    link: "https://x.com/sneakyorca",
+    platform: "X",
+    username: "@sneakyorca",
+    id: 3,
+  },
+];
+
+const CopyEmail = () => {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    try {
+      await navigator.clipboard.writeText(EMAIL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      window.location.href = `mailto:${EMAIL}`;
+    }
+  };
+  return (
+    <button
+      type="button"
+      onClick={copy}
+      className="t-meta shrink-0 px-3 py-2 rounded-full border text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+    >
+      <span aria-live="polite">{copied ? "Copied" : "Copy"}</span>
+    </button>
+  );
+};
+
 const Contact = () => {
   return (
-    <>
-      <section
-        id="contact"
-        className="section flex justify-between flex-1 flex-col lg:flex-row gap-24"
-      >
-        <main className="w-full reveal">
-          <p className="title fade-in">CONTACT</p>
-          <h1
-            className="fade-in-up text-4xl md:text-5xl w-full lg:text-6xl font-display font-bold text-foreground mb-8"
-            data-reveal-delay="0.06s"
-          >
-            Let's work together<span className="text-primary">.</span>
-          </h1>
-          <p className="fade-in mb-6 text-lg" data-reveal-delay="0.12s">
-            I'm currently open to freelance projects and full-time roles. If you
-            have an idea, a project, or just want to say hi? Drop me a line.
+    <section id="contact" className="section">
+      <p className="title fade-in">Contact</p>
+      <h2 className="fade-in-up t-display mb-10" data-reveal-delay="0.06s">
+        Let&apos;s work
+        <br />
+        together<span className="text-primary">.</span>
+      </h2>
+
+      <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+        <div className="reveal" data-reveal-delay="0.12s">
+          <p className="t-lead max-w-xl mb-10">
+            I&apos;m open to freelance projects and full-time roles. Have an
+            idea, a project, or just want to say hi? Drop me a line.
           </p>
-          <p className="fade-in" data-reveal-delay="0.18s">
+          <p className="muted-text mb-3">Email</p>
+          <div className="flex items-center gap-4 flex-wrap">
+            <a
+              href={`mailto:${EMAIL}`}
+              className="font-display font-bold text-foreground text-[clamp(1.25rem,0.9rem+1.6vw,2.25rem)] leading-tight tracking-tight break-normal underline decoration-primary/40 decoration-2 underline-offset-[0.2em] hover:decoration-primary transition-colors"
+            >
+              {EMAIL.split("@")[0]}
+              <wbr />@{EMAIL.split("@")[1]}
+            </a>
+            <CopyEmail />
+          </div>
+          <p className="t-small mt-8">
             Based in{" "}
             <span className="font-semibold text-foreground">
-              Lagos, Nigeria.{" "}
+              Lagos, Nigeria
             </span>
-            Open to remote worldwide.
+            . Open to remote work worldwide.
           </p>
-        </main>
-        <aside
-          className="w-full flex flex-col gap-3 slide-in-right"
+        </div>
+
+        <ul
+          className="flex flex-col border-t border-border slide-in-right"
           data-reveal-delay="0.22s"
         >
-          <Socials
-            info={{
-              link: "https://github.com/Sneakyorca",
-              icon: "",
-              platform: "GitHub",
-              username: "@sneakyorca",
-              id: 1,
-            }}
-          />
-          <Socials
-            info={{
-              link: "https://linkedin.com/in/abdulmaleek-odetunde-95b00a366",
-              icon: "",
-              platform: "LinkedIn",
-              username: "abdulmaleekodetunde",
-              id: 2,
-            }}
-          />
-          <Socials
-            info={{
-              link: "https://x.com/sneakyorca",
-              icon: "",
-              platform: "X",
-              username: "@sneakyorca",
-              id: 3,
-            }}
-          />
-          <Socials
-            info={{
-              link: "mailto:abdulmaleek.odetunde.dev@gmail.com",
-              icon: "",
-              platform: "Email",
-              username: "abdulmaleek.odetunde.dev@gmail.com",
-              id: 4,
-            }}
-          />
-        </aside>
-      </section>
-    </>
+          {socials.map((info) => (
+            <li key={info.id}>
+              <Socials info={info} />
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
 const Socials = ({ info }) => {
@@ -76,8 +101,10 @@ const Socials = ({ info }) => {
   return (
     <a
       href={info.link}
-      target="_blank"
-      className="reveal bg-card/30 hover:bg-card active:bg-card border p-4 flex justify-between items-center rounded-xl group"
+      target={info.link.startsWith("mailto:") ? undefined : "_blank"}
+      rel="noopener noreferrer"
+      aria-label={`${info.platform}: ${info.username}`}
+      className="reveal flex justify-between items-center py-5 border-b border-border group"
       data-reveal-delay={delay}
     >
       <span className="inline-block p-3 rounded-full bg-secondary/50 mr-4 text-gray-500 dark:text-gray-400 group-hover:bg-primary/10 group-hover:text-primary group-active:bg-primary/10 group-active:text-primary transition-all duration-300">
@@ -91,7 +118,6 @@ const Socials = ({ info }) => {
             <path
               fillRule="evenodd"
               d="M5.851 3.001c.214-.006.492.012.835.085c.384.081.848.23 1.399.483c.355.164.748.373 1.179.637a12.9 12.9 0 0 1 5.738 0a11 11 0 0 1 1.268-.677c.724-.325 1.294-.463 1.723-.51a3 3 0 0 1 .553-.01a2 2 0 0 1 .285.046l.013.004l.006.001l.003.001h.002s.001.001-.277.962l.278-.96a1 1 0 0 1 .638.558a5.22 5.22 0 0 1 .283 3.37c.928 1.21 1.297 2.77 1.21 4.244c-.097 1.673-.789 3.386-2.123 4.505c-.859.72-1.88 1.122-2.888 1.356c.168.483.237.995.201 1.506V21a1 1 0 1 1-2 0v-2.435q0-.04.004-.08c.02-.26-.015-.522-.106-.768a1.85 1.85 0 0 0-.425-.663a1 1 0 0 1 .601-1.7c1.329-.144 2.498-.45 3.328-1.146c.827-.694 1.34-1.845 1.412-3.09c.073-1.243-.302-2.43-1.05-3.197a1 1 0 0 1-.218-1.055a3.2 3.2 0 0 0 .146-1.794c-.198.05-.457.137-.781.282a10 10 0 0 0-1.363.762a1 1 0 0 1-.803.13a10.9 10.9 0 0 0-5.578 0a1 1 0 0 1-.803-.13a10 10 0 0 0-1.294-.73a5 5 0 0 0-.85-.314a3.2 3.2 0 0 0 .146 1.794a1 1 0 0 1-.218 1.055c-.706.725-1.08 1.82-1.058 2.992s.438 2.293 1.145 3.037c.837.88 2.12 1.25 3.615 1.432a1 1 0 0 1 .59 1.697a1.85 1.85 0 0 0-.422.655c-.09.244-.127.502-.109.759l.003.072V21a1 1 0 1 1-2 0v-.462c-.653.083-1.237.06-1.765-.06c-.864-.198-1.483-.634-1.957-1.096a8 8 0 0 1-.597-.664l-.16-.198a12 12 0 0 0-.29-.35c-.279-.32-.433-.412-.557-.442a1 1 0 1 1 .474-1.943c.746.182 1.244.673 1.59 1.07c.123.14.251.3.366.442l.125.154c.154.189.296.354.446.5c.288.28.593.482 1.006.576c.31.071.732.093 1.314-.01a3.8 3.8 0 0 1 .211-1.409c-1.185-.283-2.393-.793-3.332-1.78c-1.11-1.167-1.666-2.797-1.695-4.378c-.026-1.383.351-2.824 1.221-3.958a5.2 5.2 0 0 1 .283-3.371a1 1 0 0 1 .638-.559l.278.96l-.278-.96h.003l.004-.002l.008-.002l.018-.005a1 1 0 0 1 .137-.028a2 2 0 0 1 .271-.024"
-              className="Vector (Stroke)"
               clipRule="evenodd"
             />
           </svg>
@@ -103,8 +129,8 @@ const Socials = ({ info }) => {
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
-            strokeLineCap="round"
-            strokeLineJoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             style={{ opacity: 1 }}
           >
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2a2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6M2 9h4v12H2z" />
@@ -127,8 +153,8 @@ const Socials = ({ info }) => {
             stroke="currentColor"
             className="size-4"
             strokeWidth="1.5"
-            strokeLineCap="round"
-            strokeLineJoin="round"
+            strokeLinecap="round"
+            strokeLinejoin="round"
             style={{ opacity: 1 }}
           >
             <path
@@ -139,10 +165,8 @@ const Socials = ({ info }) => {
         )}
       </span>
       <div className="flex flex-col mr-auto">
-        <span className="text-sm text-foreground font-semibold font-display">
-          {info.platform}
-        </span>
-        <span className="text-xs">{info.username}</span>
+        <span className="t-h4">{info.platform}</span>
+        <span className="t-small text-muted-foreground">{info.username}</span>
       </div>
       <svg
         xmlns="http://www.w3.org/2000/svg"

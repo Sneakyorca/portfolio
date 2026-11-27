@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../hooks/ThemeContext";
-const navItems = ["about", "work", "skills", "contact"];
+const navItems = ["work", "about", "skills", "contact"];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [active, setActive] = useState("");
   const { toggleTheme } = useContext(ThemeContext);
 
   useEffect(() => {
@@ -29,6 +30,38 @@ const Navbar = () => {
     };
   }, []);
 
+  // Highlight the nav link for whichever section sits in the middle of the screen.
+  useEffect(() => {
+    const sections = navItems
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) setActive(e.target.id);
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  // While the mobile menu is open: lock page scroll and close on Escape.
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const handleKey = (e) => {
+      if (e.key === "Escape") setMobileOpen(false);
+    };
+    window.addEventListener("keydown", handleKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKey);
+    };
+  }, [mobileOpen]);
+
   return (
     <>
       <nav
@@ -38,10 +71,10 @@ const Navbar = () => {
             : "bg-transparent border-b border-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 h-24 flex items-center justify-between">
+        <div className="max-w-[90rem] mx-auto px-6 md:px-12 lg:px-20 h-20 md:h-24 flex items-center justify-between">
           <a
             href="#"
-            className="font-display text-lg font-bold tracking-tight text-foreground"
+            className="font-display text-xl font-extrabold tracking-tight text-foreground"
           >
             abdulmaleek<span className="text-primary">.</span>dev
           </a>
@@ -52,7 +85,12 @@ const Navbar = () => {
                 <a
                   key={item}
                   href={`#${item}`}
-                  className="relative text-sm font-body text-muted-foreground hover:text-foreground active:text-foreground transition-colors duration-200 capitalize after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full active:after:w-full"
+                  aria-current={active === item ? "true" : undefined}
+                  className={`relative t-small font-medium capitalize transition-colors duration-200 hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
+                    active === item
+                      ? "text-foreground after:w-full"
+                      : "text-muted-foreground after:w-0"
+                  }`}
                 >
                   {item}
                 </a>
@@ -103,7 +141,9 @@ const Navbar = () => {
                 }
               }}
               className="md:hidden w-10 h-10 rounded-full flex items-center justify-center bg-secondary text-foreground cursor-pointer"
-              aria-label="Toggle menu"
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
             >
               {mobileOpen ? (
                 <svg
@@ -142,6 +182,8 @@ const Navbar = () => {
       </nav>
 
       <div
+        id="mobile-menu"
+        inert={!mobileOpen}
         className={`fixed inset-0 z-40 bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 transition-all duration-500 md:hidden ${
           mobileOpen
             ? "opacity-100 pointer-events-auto"
@@ -153,13 +195,14 @@ const Navbar = () => {
             key={item}
             href={`#${item}`}
             onClick={() => setMobileOpen(false)}
-            className="text-3xl font-display font-bold text-foreground hover:text-primary active:text-primary transition-colors capitalize"
+            className="t-h2 text-foreground hover:text-primary active:text-primary transition-colors capitalize"
             style={{
               transitionDelay: mobileOpen ? `${i * 75}ms` : "0ms",
               opacity: mobileOpen ? 1 : 0,
               transform: mobileOpen ? "translateY(0)" : "translateY(20px)",
-              transition:
-                "opacity 0.4s ease, transform 0.4s ease, color 0.2s ease",
+              transitionProperty: "opacity, transform, color",
+              transitionDuration: "0.4s, 0.4s, 0.2s",
+              transitionTimingFunction: "ease",
             }}
           >
             {item}
