@@ -31,6 +31,16 @@ const groups = [
       { name: "Figma", match: [] },
     ],
   },
+  {
+    // Named exactly as the user listed them; no usage counts for tools.
+    name: "AI tools",
+    tools: [
+      { name: "Claude & Claude Code", match: [] },
+      { name: "ChatGPT & Codex", match: [] },
+      { name: "GitHub Copilot", match: [] },
+      { name: "v0 / Lovable / Bolt", match: [] },
+    ],
+  },
 ];
 
 const usedIn = (match) =>
@@ -56,7 +66,7 @@ const Skills = () => {
         </p>
       </div>
 
-      <div className="grid gap-12 md:gap-10 md:grid-cols-3">
+      <div className="grid gap-12 md:gap-10 md:grid-cols-2 xl:grid-cols-4">
         {groups.map((group, gi) => (
           <div
             key={group.name}

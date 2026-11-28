@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "title": "BIM-GOLD",
+    "tagline": "Hair and beauty salon, Huddersfield",
+    "summary": "Booking website for a braids and hair salon, with an online shop the owner runs day to day.",
+    "highlights": [
+      "Online booking for every service, straight to the salon",
+      "Hair product shop with cart",
+      "Owner updates hours, services, prices and promotions from a dashboard"
+    ],
+    "metrics": [],
+    "image": "/assets/bimgold.webp",
+    "link": "https://bimgoldsalon.co.uk/",
+    "year": "2026",
+    "stack": ["Next.js", "Supabase"],
+    "accent": "hsl(222 80% 30%)",
+    "projectType": "Freelance"
+  },
+  {
+    "id": 2,
     "title": "ResumeIQ",
     "tagline": "AI resume review",
     "summary": "Upload a resume and get an honest score, category breakdowns and line-by-line rewrites.",
@@ -39,7 +57,7 @@
     "metricsSource": "Lighthouse · mobile · Nov 2026"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Planet 9",
     "tagline": "Cinematography studio",
     "summary": "Website for a Lagos cinematography and visual production studio.",
@@ -65,16 +83,13 @@
     "image": "/assets/planet9.webp",
     "link": "https://planet9-cyan.vercel.app/",
     "year": "2026",
-    "stack": [
-      "React",
-      "Tailwind CSS"
-    ],
+    "stack": ["React", "Tailwind CSS"],
     "accent": "hsl(25 95% 53%)",
     "projectType": "Freelance",
     "metricsSource": "Lighthouse · mobile · Nov 2026"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "TradeWithNifemi",
     "tagline": "Trading signals hub",
     "summary": "Landing page for a trading signals and account management service.",
@@ -100,37 +115,9 @@
     "image": "/assets/tradewithnifemi.webp",
     "link": "https://trade-with-nifemi.vercel.app/",
     "year": "2026",
-    "stack": [
-      "React",
-      "Tailwind CSS",
-      "JavaScript",
-      "REST API"
-    ],
+    "stack": ["React", "Tailwind CSS", "JavaScript", "REST API"],
     "accent": "hsl(12 80% 55%)",
     "projectType": "Freelance",
     "metricsSource": "Lighthouse · mobile · Nov 2026"
-  },
-  {
-    "id": 4,
-    "title": "Cravue",
-    "tagline": "Brand marketing platform",
-    "summary": "Frontend for a brand marketing agency's platform, shipped end to end.",
-    "highlights": [
-      "Responsive platform UI in React and CSS",
-      "Custom API integration for form submissions",
-      "Clean, conversion-focused layout"
-    ],
-    "metrics": [],
-    "image": "/assets/cravue.webp",
-    "link": "https://crauve.org",
-    "year": "2026",
-    "stack": [
-      "React",
-      "CSS",
-      "JavaScript",
-      "REST API"
-    ],
-    "accent": "hsl(230 60% 55%)",
-    "projectType": "Freelance"
   }
 ]

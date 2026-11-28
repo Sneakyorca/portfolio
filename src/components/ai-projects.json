@@ -1,0 +1,16 @@
+[
+  {
+    "title": "ClearTill",
+    "summary": "One shop link for sellers on WhatsApp and Instagram. Customers pick and pay through Paystack, and the seller only sees paid once the money is confirmed.",
+    "link": "https://cleartill.cleartill.workers.dev/",
+    "stack": ["Next.js", "Tailwind CSS", "Paystack", "Cloudflare Workers"],
+    "lighthouse": { "performance": 100, "lcp": "1.5s" }
+  },
+  {
+    "title": "Oluso",
+    "summary": "Checks whether a shop's checkout actually works. A free scan finds dead links, broken phone layouts and JavaScript errors; monitoring runs checkout every hour and sends a recording when it breaks.",
+    "link": "https://oluso-cyan.vercel.app/",
+    "stack": ["Next.js", "Vercel"],
+    "lighthouse": { "performance": 100, "lcp": "0.9s" }
+  }
+]

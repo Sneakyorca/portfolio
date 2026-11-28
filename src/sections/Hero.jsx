@@ -34,7 +34,7 @@ const Hero = () => {
             <span className="absolute inset-0 rounded-full bg-green-500 ripple" />
             <span className="relative size-2 rounded-full bg-green-500" />
           </span>
-          Available for work · Lagos
+          Taking on new projects · Lagos and UK
         </p>
 
         <h1
@@ -52,9 +52,9 @@ const Hero = () => {
         </h1>
 
         <p className="fade-in t-lead max-w-lg mb-10" data-reveal-delay="0.2s">
-          Self-taught frontend developer. Since 2024 I&apos;ve shipped{" "}
-          {totalProjects} projects in React and Next.js, {clientProjects} of
-          them for paying clients.
+          Booking sites and websites for small businesses, built in React and
+          Next.js. Since 2024 I&apos;ve shipped {totalProjects} projects,{" "}
+          {clientProjects} of them for paying clients.
         </p>
 
         <div
@@ -63,10 +63,10 @@ const Hero = () => {
         >
           <Magnetic>
             <a
-              href="#work"
+              href="#contact"
               className="group/cta flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-primary-foreground dark:text-background hover:bg-primary/90 hover:shadow-[0_8px_24px_-8px_hsl(var(--primary)/0.6)] transition-[background-color,box-shadow] duration-300"
             >
-              View my work
+              Start a project
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -80,10 +80,10 @@ const Hero = () => {
           </Magnetic>
           <Magnetic>
             <a
-              href="#contact"
+              href="#work"
               className="inline-block px-7 py-3.5 rounded-full text-foreground border hover:bg-muted/60 transition-colors duration-300"
             >
-              Get in touch
+              See my work
             </a>
           </Magnetic>
         </div>

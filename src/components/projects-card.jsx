@@ -53,12 +53,12 @@ const ProjectCard = () => {
                   src={project.image}
                   alt={`Screenshot of ${project.title}`}
                   width={1200}
-                  height={1200}
+                  height={750}
                   loading={featured ? "eager" : "lazy"}
                   decoding="async"
-                  className={`w-full object-cover object-top transition-[object-position] duration-[2.4s] ease-in-out group-hover:object-[50%_40%] ${
-                    featured ? "h-56 md:h-72 lg:h-[23rem]" : "h-48 md:h-56"
-                  }`}
+                  // Fixed 16:10 frame: always shows the full width of the
+                  // screenshot; taller (square) shots pan down on hover.
+                  className="block w-full aspect-[16/10] object-cover object-top transition-[object-position] duration-[2.4s] ease-in-out group-hover:object-[50%_40%]"
                 />
               </div>
             </div>

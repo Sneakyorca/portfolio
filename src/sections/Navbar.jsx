@@ -1,6 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../hooks/ThemeContext";
-const navItems = ["work", "about", "skills", "contact"];
+const navItems = ["work", "services", "process", "faq", "contact"];
+const navLabel = (id) =>
+  id === "faq" ? "FAQ" : id[0].toUpperCase() + id.slice(1);
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -80,19 +82,19 @@ const Navbar = () => {
           </a>
 
           <div className="flex items-center gap-4">
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6 lg:gap-8">
               {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item}`}
                   aria-current={active === item ? "true" : undefined}
-                  className={`relative t-small font-medium capitalize transition-colors duration-200 hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
+                  className={`relative t-small font-medium transition-colors duration-200 hover:text-foreground after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full ${
                     active === item
                       ? "text-foreground after:w-full"
                       : "text-muted-foreground after:w-0"
                   }`}
                 >
-                  {item}
+                  {navLabel(item)}
                 </a>
               ))}
             </div>
@@ -195,7 +197,7 @@ const Navbar = () => {
             key={item}
             href={`#${item}`}
             onClick={() => setMobileOpen(false)}
-            className="t-h2 text-foreground hover:text-primary active:text-primary transition-colors capitalize"
+            className="t-h2 text-foreground hover:text-primary active:text-primary transition-colors"
             style={{
               transitionDelay: mobileOpen ? `${i * 75}ms` : "0ms",
               opacity: mobileOpen ? 1 : 0,
@@ -205,7 +207,7 @@ const Navbar = () => {
               transitionTimingFunction: "ease",
             }}
           >
-            {item}
+            {navLabel(item)}
           </a>
         ))}
       </div>

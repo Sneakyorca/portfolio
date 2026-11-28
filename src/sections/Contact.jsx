@@ -1,6 +1,7 @@
 import { useState } from "react";
-
-const EMAIL = "abdulmaleek.odetunde.dev@gmail.com";
+import EnquiryForm from "../components/enquiry-form";
+import WhatsAppIcon from "../components/whatsapp-icon";
+import { EMAIL, WHATSAPP_DISPLAY, WHATSAPP_URL } from "../data/content";
 
 const socials = [
   {
@@ -49,48 +50,80 @@ const Contact = () => {
   return (
     <section id="contact" className="section">
       <p className="title fade-in">Contact</p>
-      <h2 className="fade-in-up t-display mb-10" data-reveal-delay="0.06s">
-        Let&apos;s work
+      <h2 className="fade-in-up t-display mb-12" data-reveal-delay="0.06s">
+        Let&apos;s build
         <br />
-        together<span className="text-primary">.</span>
+        your site<span className="text-primary">.</span>
       </h2>
 
-      <div className="grid gap-14 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+      <div className="grid gap-14 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
         <div className="reveal" data-reveal-delay="0.12s">
-          <p className="t-lead max-w-xl mb-10">
-            I&apos;m open to freelance projects and full-time roles. Have an
-            idea, a project, or just want to say hi? Drop me a line.
+          <p className="t-lead max-w-md mb-10">
+            Tell me about your business and what you need. The quickest way to
+            reach me is WhatsApp.
           </p>
-          <p className="muted-text mb-3">Email</p>
-          <div className="flex items-center gap-4 flex-wrap">
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 rounded-xl border bg-card p-5 mb-8 hover:border-[#25D366]/60 transition-colors"
+          >
+            <span className="grid place-items-center size-12 shrink-0 rounded-full bg-[#25D366] text-white">
+              <WhatsAppIcon className="size-6" />
+            </span>
+            <span className="flex flex-col">
+              <span className="t-h4">Chat on WhatsApp</span>
+              <span className="t-small text-muted-foreground">
+                {WHATSAPP_DISPLAY}
+              </span>
+            </span>
+          </a>
+
+          <p className="muted-text mb-3">Or email</p>
+          <div className="flex items-center gap-4 flex-wrap mb-10">
             <a
               href={`mailto:${EMAIL}`}
-              className="font-display font-bold text-foreground text-[clamp(1.25rem,0.9rem+1.6vw,2.25rem)] leading-tight tracking-tight break-normal underline decoration-primary/40 decoration-2 underline-offset-[0.2em] hover:decoration-primary transition-colors"
+              className="font-display font-bold text-foreground text-[clamp(1.125rem,0.95rem+0.8vw,1.5rem)] leading-tight tracking-tight break-normal underline decoration-primary/40 decoration-2 underline-offset-[0.2em] hover:decoration-primary transition-colors"
             >
               {EMAIL.split("@")[0]}
               <wbr />@{EMAIL.split("@")[1]}
             </a>
             <CopyEmail />
           </div>
-          <p className="t-small mt-8">
+
+          <ul className="flex flex-col border-t border-border mb-8">
+            {socials.map((info) => (
+              <li key={info.id}>
+                <Socials info={info} />
+              </li>
+            ))}
+          </ul>
+
+          <p className="t-small">
             Based in{" "}
             <span className="font-semibold text-foreground">
               Lagos, Nigeria
             </span>
-            . Open to remote work worldwide.
+            , working with clients in Nigeria and the UK.
+          </p>
+          <p className="t-small mt-2">
+            Also open to full-time frontend roles.{" "}
+            <a
+              href="https://linkedin.com/in/abdulmaleek-odetunde-95b00a366"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+            >
+              Find me on LinkedIn
+            </a>
+            .
           </p>
         </div>
 
-        <ul
-          className="flex flex-col border-t border-border slide-in-right"
-          data-reveal-delay="0.22s"
-        >
-          {socials.map((info) => (
-            <li key={info.id}>
-              <Socials info={info} />
-            </li>
-          ))}
-        </ul>
+        <div className="slide-in-right" data-reveal-delay="0.18s">
+          <EnquiryForm />
+        </div>
       </div>
     </section>
   );

@@ -467,3 +467,25 @@ p {
 @utility hero-title {
   font-size: clamp(3rem, 1.4rem + 4.4vw, 6rem);
 }
+
+/* ---------- FAQ accordion: animate open/close where supported ---------- */
+@supports (interpolate-size: allow-keywords) {
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  .faq-item::details-content {
+    height: 0;
+    overflow: clip;
+    transition:
+      height 0.35s var(--motion-ease),
+      content-visibility 0.35s allow-discrete;
+  }
+  .faq-item[open]::details-content {
+    height: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-item::details-content {
+    transition: none;
+  }
+}

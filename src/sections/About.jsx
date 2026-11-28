@@ -58,6 +58,11 @@ const About = () => {
               spacing, motion that has a reason, and pages that still load fast
               on a phone.
             </p>
+            <p className="fade-in-up" data-reveal-delay="0.32s">
+              I build with AI tools like Claude Code, ChatGPT and GitHub
+              Copilot. They let me ship faster and try more ideas, and I review
+              and test everything myself before it goes live.
+            </p>
           </div>
           <div className="journey">
             <p className="muted-text mb-8">My journey</p>

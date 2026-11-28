@@ -8,11 +8,11 @@
     "projectType": "Freelance"
   },
   {
-    "title": "BIM-GOLD",
-    "tagline": "Hair and beauty salon, Huddersfield",
-    "summary": "Salon site with online booking, a hair product shop with cart, and a training page.",
-    "link": "https://bimgoldsalon.co.uk/",
-    "stack": ["Next.js", "Supabase"],
+    "title": "Cravue",
+    "tagline": "Brand marketing agency",
+    "summary": "Frontend for a brand marketing agency's platform, shipped end to end.",
+    "link": "https://crauve.org",
+    "stack": ["React", "CSS", "JavaScript", "REST API"],
     "projectType": "Freelance"
   }
 ]
