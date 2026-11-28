@@ -105,7 +105,7 @@ const Contact = () => {
             <span className="font-semibold text-foreground">
               Lagos, Nigeria
             </span>
-            , working with clients in Nigeria and the UK.
+            , working remotely with clients anywhere in the world.
           </p>
           <p className="t-small mt-2">
             Also open to full-time frontend roles.{" "}

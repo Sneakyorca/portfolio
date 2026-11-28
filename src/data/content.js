@@ -146,8 +146,8 @@ export const faqs = [
     a: "Your logo, some photos, your list of services and prices, and a few websites you like. If anything's missing, we'll sort it out on the first call.",
   },
   {
-    q: "Do you work with clients outside Nigeria?",
-    a: "Yes. I'm based in Lagos and have built sites for businesses in the UK. We can work over WhatsApp, email or video calls.",
+    q: "Do you work with clients in other countries?",
+    a: "Yes, wherever you are. I'm based in Lagos and work remotely, and I've already built sites for businesses abroad, including in the UK. We can work over WhatsApp, email or video calls, around your time zone.",
   },
   {
     q: "How many revisions do I get?",

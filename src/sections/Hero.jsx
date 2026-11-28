@@ -34,7 +34,7 @@ const Hero = () => {
             <span className="absolute inset-0 rounded-full bg-green-500 ripple" />
             <span className="relative size-2 rounded-full bg-green-500" />
           </span>
-          Taking on new projects · Lagos and UK
+          Taking on new projects · Remote, worldwide
         </p>
 
         <h1
